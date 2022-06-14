@@ -1,4 +1,4 @@
-﻿using eShopOnContainers.Core.Models.Products;
+﻿using eShopOnContainers.Core.Models.Product;
 using eShopOnContainers.Core.ViewModels.Base;
 using System;
 using System.Collections.Generic;
@@ -31,61 +31,8 @@ namespace eShopOnContainers.Core.ViewModels
              "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/03-2022/intel-11700K-mob.jpg",
              };
 
-        private List<Products> _items = new List<Products>(){
-                new Products()
-                {
-                    ImageURL = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/samsung/thumb/121935_small.jpg",
-                    Name = string.Format("SM-A325FZKHTUR"),
-                    Cost = 4799,
-                    Detail = "Samsung Galaxy A32 128 Gb Akıllı Siyah",
-
-                },
-                new Products()
-                {
-                   ImageURL = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lg/thumb/nano75pa1-2_small.jpg",
-                    Name = string.Format("55NANO756PA"),
-                    Cost = 11799,
-                    Detail = "LG 55NANO756 55inc 139 CM NANOCELL 4K UHD webOS SMART TV,DAHİLİ UYDU ALICI",
-
-                },
-                new Products()
-                {
-                    ImageURL = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/samsung/thumb/121935_small.jpg",
-                    Name = string.Format("SM-A325FZKHTUR"),
-                    Cost = 4.799,
-                    Detail = "Samsung Galaxy A32 128 Gb Akıllı Siyah",
-
-                },
-                new Products()
-                {
-                    ImageURL = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/philips/thumb/v2-88491_small.jpg",
-                    Name = string.Format("GC5032/20"),
-                    Cost = 1.599,
-                    Detail = "PHILIPS GC5032/20 AZUR ELITE OPTİMAL TEMP TEKNOLOJİLİ BUHARLI ÜTÜ",
-
-                },
-                 new Products()
-                {
-                    ImageURL = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/arnica/thumb/130693-1_small.jpg",
-                    Name = string.Format("IH32059 KÖPÜKLÜ EKO SİYAH"),
-                    Cost = 1499,
-                    Detail = "ARNICA KÖPÜKLÜ TÜRK KAHVE MAKİNESİ EKO SİYAH - IH32059",
-
-                },
-                  new Products()
-                {
-                    ImageURL = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/vivo/thumb/127471_small.jpg",
-                    Name = string.Format("Y11s_SİYAH"),
-                    Cost = 2.799,
-                    Detail = "Vivo Y11s 32 Gb Fantom Siyahı Akıllı Telefon",
-
-                },
-                   
-        
-               
-            
-        };
-        public List<Products> Items
+        private List<Product> _items = new List<Product>();
+        public List<Product> Items
         {
             get
             {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopOnContainers.Core.Models.Products
+namespace eShopOnContainers.Core.Models.Product
 {
-     public class Products
+     public class Product
     {
         public int Id { get; set; }
         public string Name { get; set; }
