@@ -1,4 +1,5 @@
 ﻿using eShopOnContainers.Core.Services.Basket;
+using eShopOnContainers.Core.Services.Cart;
 using eShopOnContainers.Core.Services.Catalog;
 using eShopOnContainers.Core.Services.Dependency;
 using eShopOnContainers.Core.Services.FixUri;
@@ -57,6 +58,9 @@ namespace eShopOnContainers.Core.ViewModels.Base
             Xamarin.Forms.DependencyService.RegisterSingleton<ICampaignService>(new CampaignMockService());
             Xamarin.Forms.DependencyService.RegisterSingleton<IProductsService>(new ProductService(requestProvider));
             Xamarin.Forms.DependencyService.RegisterSingleton<IProductsService>(new ProductMockService());//sahte versiyonu.
+                                                                                                          //car version.
+            Xamarin.Forms.DependencyService.RegisterSingleton<ICartService>(new CartService());
+            Xamarin.Forms.DependencyService.RegisterSingleton<ICartService>(new CartMockService());
             // View models - by default, TinyIoC will register concrete classes as multi-instance.
             Xamarin.Forms.DependencyService.Register<BasketViewModel> ();
             Xamarin.Forms.DependencyService.Register<CatalogViewModel> ();
@@ -69,6 +73,8 @@ namespace eShopOnContainers.Core.ViewModels.Base
             Xamarin.Forms.DependencyService.Register<CampaignViewModel> ();
             Xamarin.Forms.DependencyService.Register<CampaignDetailsViewModel> ();
             Xamarin.Forms.DependencyService.Register<MainPageViewModel>();
+            Xamarin.Forms.DependencyService.Register<ProductDetailViewModel>();
+
         }
 
         public static void UpdateDependencies(bool useMockServices)
@@ -82,6 +88,7 @@ namespace eShopOnContainers.Core.ViewModels.Base
                 Xamarin.Forms.DependencyService.RegisterSingleton<IUserService> (new UserMockService());
                 Xamarin.Forms.DependencyService.RegisterSingleton<ICampaignService> (new CampaignMockService());
                 Xamarin.Forms.DependencyService.RegisterSingleton<IProductsService>(new ProductMockService());
+                Xamarin.Forms.DependencyService.RegisterSingleton<ICartService>(new CartMockService());
                 UseMockService = true;
             }
             else
@@ -94,7 +101,7 @@ namespace eShopOnContainers.Core.ViewModels.Base
                 Xamarin.Forms.DependencyService.RegisterSingleton<IOrderService> (new OrderService(requestProvider));
                 Xamarin.Forms.DependencyService.RegisterSingleton<IUserService> (new UserService(requestProvider));
                 Xamarin.Forms.DependencyService.RegisterSingleton<IProductsService>(new ProductService(requestProvider));
-
+                Xamarin.Forms.DependencyService.RegisterSingleton<ICartService>(new CartService());
                 UseMockService = false;
             }
         }

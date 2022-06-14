@@ -1,12 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="eShopOnContainers.Core.Views.ProductDetailPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" xmlns:vm="clr-namespace:eShopOnContainers.Core.ViewModels"
+             x:Class="eShopOnContainers.Core.Views.ProductDetailPage"
+             >
+
+    <ContentPage.BindingContext>
+        <vm:ProductDetailViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <ScrollView>
+
+            <StackLayout>
+
+                <StackLayout BackgroundColor="White">
+
+
+                    <ImageButton Source="{Binding ImageURL }" BackgroundColor="#003176" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></ImageButton>
+
+                    <StackLayout>
+
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+
+
+                                    <StackLayout >
+                                        <Label Text="Seri No:" BackgroundColor="Gray"/>
+                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Name }"/>
+                                        <Label Text="Fiyatı:" BackgroundColor="Gray"/>
+                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding  Cost}"/>
+                                        <Label Text="Detay:" BackgroundColor="Gray"/>
+                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Detail}"/>
+                                  
+
+                                    </StackLayout>
+                           
+             
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+        <Button Text="Satın AL" BackgroundColor="DarkBlue"/>
+    </StackLayout>
 </ContentPage>

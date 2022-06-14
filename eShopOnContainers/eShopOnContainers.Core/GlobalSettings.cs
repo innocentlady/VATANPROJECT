@@ -7,6 +7,7 @@ namespace eShopOnContainers.Core
         public const string AzureTag = "Azure";
         public const string MockTag = "Mock";
         public const string DefaultEndpoint = "http://YOUR_IP_OR_DNS_NAME"; // i.e.: "http://YOUR_IP" or "http://YOUR_DNS_NAME"
+        public string DefaultEndpointAPI { get; set; } = "https://vatanapi-clone.azurewebsites.net/api/";
 
         private string _baseIdentityEndpoint;
         private string _baseGatewayShoppingEndpoint;

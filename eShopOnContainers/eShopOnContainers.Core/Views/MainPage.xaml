@@ -47,7 +47,7 @@
                                 <DataTemplate >
                                     <Frame BackgroundColor="White"   Margin="5">
                                         <StackLayout>
-                                            <Image Source="{Binding ImageSource}"/>
+                                            <Image Source="{Binding ImageURL}"/>
                                             <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Name }" />
                                             <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding  Cost}"/>
                                             <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Detail}"/>
