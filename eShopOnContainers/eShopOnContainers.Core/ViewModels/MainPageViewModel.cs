@@ -72,8 +72,13 @@ namespace eShopOnContainers.Core.ViewModels
 
         public ICommand NavigateSearch => new Command<string>(async (string query) =>
         {
-        // await NavigationService.NavigateToAsync("Search");
-        Console.WriteLine("Success");
+            if (query != null)
+            {
+                IsBusy = true;
+                await NavigationService.NavigateToAsync("Products", new Dictionary<string, string> { { "SearchQuery", query } });
+                IsBusy = false;
+            }
+            Console.WriteLine("Success");
         });
 
     }

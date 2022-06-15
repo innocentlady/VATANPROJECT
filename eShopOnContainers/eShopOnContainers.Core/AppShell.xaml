@@ -6,9 +6,19 @@
     x:Class="eShopOnContainers.Core.AppShell">
 
 
-
-
     <FlyoutItem Title="Anasayfa" Icon="home.png">
         <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Login" Icon="login.png">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Categroy" Icon="login.png">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:PageCatergory}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Others" Icon="login.png">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:PageOthers}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Basket" Icon="login.png">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:BasketView}" />
     </FlyoutItem>
 </Shell>
