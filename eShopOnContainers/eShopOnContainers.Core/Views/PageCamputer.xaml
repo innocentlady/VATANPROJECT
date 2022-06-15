@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase  xmlns:views="clr-namespace:eShopOnContainers.Core.Views" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="eShopOnContainers.Core.Views.PageCamputer">
+    <StackLayout>
+        <ScrollView>
+
+            <StackLayout>
+
+                <StackLayout BackgroundColor="White">
+
+                    <StackLayout BackgroundColor="#003176" HeightRequest="250" Padding="5">
+
+                        <CarouselView x:Name="ComputerCarousel" BackgroundColor="#003176" IndicatorView="indicatorView">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Frame CornerRadius="10" IsClippedToBounds="True" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                            <ImageButton Source="{Binding }" BackgroundColor="#003176" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></ImageButton>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <IndicatorView Margin="0,5,0,5" x:Name="indicatorView" IndicatorColor="Gray" SelectedIndicatorColor="White" HorizontalOptions="Center" IndicatorSize="7"/>
+                    </StackLayout>
+
+                    <StackLayout>
+
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+
+                    <flv:FlowListView FlowColumnCount="1"   
+                SeparatorVisibility="Default"   
+                HasUnevenRows="True"  
+                FlowItemTappedCommand="{Binding ItemTappedCommand}"   
+                FlowItemsSource="{Binding Items}"  FlowItemTapped="ÜrünTapped">
+
+                        <flv:FlowListView.FlowColumnTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="White"   Margin="10">
+                                    <StackLayout >
+                                        <Label Text="Seri No:" BackgroundColor="Gray"/>
+                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding ItemName }"/>
+                                        <Label Text="Fiyatı:" BackgroundColor="Gray"/>
+                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding  ItemCost}"/>
+                                        <Label Text="Detay:" BackgroundColor="Gray"/>
+                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding ItemDetail}"/>
+                                        <Label Text="Gönderim:" BackgroundColor="Gray"/>
+                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding ItemtoShip}"/>
+
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </flv:FlowListView.FlowColumnTemplate>
+                    </flv:FlowListView>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+        <Button Text="Satın AL" BackgroundColor="DarkBlue"/>
+    </StackLayout>
+</views:ContentPageBase>

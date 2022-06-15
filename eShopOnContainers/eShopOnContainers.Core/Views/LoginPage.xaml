@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eShopOnContainers.Core.Views.LoginPage">
+    <ContentPage Title="Üye Girişi">
+        <StackLayout>
+            <Entry BackgroundColor="#F5F5F5" Placeholder="EMAIL" x:Name="Email" Margin="5,10" />
+            <Entry BackgroundColor="#F5F5F5" Placeholder="ŞİFRE" IsPassword="True" x:Name="Sifre" Margin="5,-10" />
+            <Label Text="ŞİFREMİ UNUTTUM" HorizontalOptions="End" TextDecorations="Underline" Margin="25,20,5,5" ></Label>
+            <StackLayout Orientation="Horizontal">
+
+                <Button BackgroundColor="Green" Text="GİRİŞ YAP" TextColor="White" x:Name="GirisYap" CornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="190" Margin="-10,5,0,0"  ></Button>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Üye Kayıt">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" >
+                <Entry BackgroundColor="#F5F5F5"  Placeholder="İsim" x:Name="NameLBL" Margin="-20,5" WidthRequest="190" HorizontalOptions="CenterAndExpand" />
+                <Entry BackgroundColor="#F5F5F5"  Placeholder="Soyisim" x:Name="LastNameLBL" Margin="-20,5" WidthRequest="200" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <Entry BackgroundColor="#F5F5F5"  Placeholder="E-Posta" x:Name="EmailLBL" Margin="5,5" />
+            <Entry BackgroundColor="#F5F5F5"  Placeholder="Şifre" IsPassword="True" x:Name="PasswordLBL" Margin="5,5" />
+            <Entry BackgroundColor="#F5F5F5"  Placeholder="Şifre Tekrar" IsPassword="True" Margin="5,5" />
+            <Entry BackgroundColor="#F5F5F5"  Placeholder="Cep Telefonu" x:Name="TelNoLBL"   Margin="5,5" />
+
+            <Label x:Name="Mesaj" TextColor="Black"/>
+            <Button BackgroundColor="Green" Text="Üye Ol"  TextColor="White" x:Name="KayitOl" CornerRadius="15" 
+                    HorizontalOptions="CenterAndExpand" WidthRequest="350" Margin="0,15,0,0" />
+
+        </StackLayout>
+
+    </ContentPage>
+
+
+    </TabbedPage>

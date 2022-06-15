@@ -70,20 +70,7 @@
                                 <TapGestureRecognizer Command="{Binding ItemTappedCommand}" NumberOfTapsRequired="1"/>
 
                             </StackLayout.GestureRecognizers>
-
-                            <BindableLayout.ItemTemplate>
-                                <DataTemplate>
-                                    <Frame BackgroundColor="White"   Margin="5">
-                                        <StackLayout>
-                                            <Image Source="{Binding ImageSource}"/>
-                                            <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding ItemName }"/>
-                                            <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding  ItemCost}"/>
-                                            <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding ItemDetail}"/>
-                                            <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding ItemtoShip}"/>
-                                        </StackLayout>
-                                    </Frame>
-                                </DataTemplate>
-                            </BindableLayout.ItemTemplate>
+                  
                         </StackLayout>
                     </ScrollView>
 
