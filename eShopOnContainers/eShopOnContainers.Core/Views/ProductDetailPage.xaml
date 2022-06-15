@@ -16,7 +16,7 @@
                 <StackLayout BackgroundColor="White">
 
 
-                    <ImageButton Source="{Binding ImageURL }" BackgroundColor="#003176" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></ImageButton>
+                    <ImageButton Source="{Binding Product.ImageURL }" BackgroundColor="#003176" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></ImageButton>
 
                     <StackLayout>
 
@@ -27,11 +27,11 @@
 
                                     <StackLayout >
                                         <Label Text="Seri No:" BackgroundColor="Gray"/>
-                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Name }"/>
+                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Product.Name }"/>
                                         <Label Text="Fiyatı:" BackgroundColor="Gray"/>
-                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding  Cost}"/>
+                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding  Product.Cost}"/>
                                         <Label Text="Detay:" BackgroundColor="Gray"/>
-                                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Detail}"/>
+                        <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Product.Detail}"/>
                                   
 
                                     </StackLayout>
