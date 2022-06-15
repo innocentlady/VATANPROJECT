@@ -51,7 +51,7 @@
                                             <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Name }" />
                                             <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding  Cost}"/>
                                             <Label HorizontalOptions="Fill"  TextColor="Black"  XAlign="Center"    YAlign="Center"  Text="{Binding Detail}"/>
-                                     
+
 
                                         </StackLayout>
                                     </Frame>
@@ -59,21 +59,6 @@
                             </flv:FlowListView.FlowColumnTemplate>
                         </flv:FlowListView>
                     </StackLayout>
-                    <Button x:Name="TümünüGöster" Text="Tümünü Göster" TextColor="Gray"  BackgroundColor="White"  Margin="-10,0,-5,0" FontSize="12"/>
-                    <Label TextColor="Black" FontAttributes="Bold" FontSize = "18" Text="En Çok Satanlar" Margin="120,5" HorizontalOptions="Start"/>
-                    <ScrollView Orientation="Horizontal">
-
-                        <StackLayout Orientation="Horizontal" BindableLayout.ItemsSource="{Binding Items}">
-
-                            <StackLayout.GestureRecognizers>
-
-                                <TapGestureRecognizer Command="{Binding ItemTappedCommand}" NumberOfTapsRequired="1"/>
-
-                            </StackLayout.GestureRecognizers>
-                  
-                        </StackLayout>
-                    </ScrollView>
-
                 </StackLayout>
             </ScrollView>
             <!--<StackLayout x:Name="pagechoise" BackgroundColor="Transparent" Orientation="Horizontal">

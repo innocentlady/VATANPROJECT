@@ -1,12 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<views:ContentPageBase  xmlns:views="clr-namespace:eShopOnContainers.Core.Views" xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="eShopOnContainers.Core.Views.PageOthers">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Button  x:Name="SiparişTakibi" Text="Sipariş Takibi" BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start"/>
+            <Button   Text="ServisTakip Formu"  BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start"/>
+            <Button  Text="BizeUlaşın"  BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start"/>
+            <Button   Text="Mağazalar"  BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start"/>
+            <Button   Text="Hakkında"  BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start" />
+
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+
+
+</views:ContentPageBase>

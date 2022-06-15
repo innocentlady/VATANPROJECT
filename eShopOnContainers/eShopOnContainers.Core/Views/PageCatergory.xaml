@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<views:ContentPageBase  xmlns:views="clr-namespace:eShopOnContainers.Core.Views" xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="eShopOnContainers.Core.Views.PageCatergory">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button  Text="Oyun Bilgisayarı" BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start"/>
+            <Button   Text="Tablet  "  BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start"/>
+            <Button  Text=" Monitör  "  BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start"/>
+            <Button   Text="  Modem "  BackgroundColor="White" TextColor="Black" BorderColor="Black" HorizontalOptions="Start"/>
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</views:ContentPageBase>

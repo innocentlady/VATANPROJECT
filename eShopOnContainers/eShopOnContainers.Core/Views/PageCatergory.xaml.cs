@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace eShopOnContainers.Core.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageCatergory : ContentPage
+    public partial class PageCatergory : ContentPageBase
     {
         public PageCatergory()
         {
